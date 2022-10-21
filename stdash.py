@@ -20,13 +20,13 @@ path1 = 'https://raw.githubusercontent.com/mankarali/mankarali07dash/master/cred
 path2 = 'https://raw.githubusercontent.com/mankarali/mankarali07dash/master/credit_test_sample_data_normalise.csv'
 
 # Sample 1200 for df_test
-df_test = pd.read_csv(path1, encoding='unicode_escape').sample(1200, random_state=42)
+df_test = pd.read_csv(path1, encoding='unicode_escape').sample(1000, random_state=42)
 
 
 df_test = df_test.loc[:, ~df_test.columns.str.match ('Unnamed')]
 df_test = df_test.sort_values ('SK_ID_CURR')
 # Sample 1200 for df_test_normalize
-df_test_normalize = pd.read_csv (path2, index_col=0).sample(1200, random_state=42)
+df_test_normalize = pd.read_csv (path2, index_col=0).sample(1000, random_state=42)
 
 ### last feature is a probability (will be used for visualization purpose) ###
 features = df_test_normalize.columns[: -1] 
