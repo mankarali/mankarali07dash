@@ -8,7 +8,6 @@ import plotly.express as px
 import seaborn as sns
 import requests
 import pickle
-import shap
 from PIL import Image
 
 import xgboost as xgb
