@@ -205,7 +205,7 @@ if client_data:
 if client_pred_score:
     st.write('### Décision sur la demande de prêt')
     ### careful the url of the API should be change for serial deployment!! ###
-    url_api_model_result = 'http://127.0.0.1:5002/scores'
+    url_api_model_result = 'https://mankarali07api.herokuapp.com/scores'
     ### Be careful to the params, with must have a dict with index / ID loan value. It is how it is implemented in our API ###
     get_request = requests.get(url=url_api_model_result, params={'index': selected_credit})
     ### We get  the prediction information from the json format of the API model ###
