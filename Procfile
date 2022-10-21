@@ -1,2 +1,1 @@
-web: gunicorn app:server --timeout 300
-worker: python3 stdash.py
+web: sh setup.sh && streamlit run stdash.py
